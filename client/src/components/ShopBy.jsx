@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import HorSlider from "./HorSlider";
+import { CommonBrands } from "./CommonBrands";
 
 const ShopBy = ({ filter, title }) => {
   const [products, setProducts] = useState([]);
@@ -50,6 +51,11 @@ const ShopBy = ({ filter, title }) => {
             />
           ))}
         </div>
+
+{
+  filter=="bestSellers" &&   <CommonBrands/>
+}
+      
       </div>
     </>
   );
